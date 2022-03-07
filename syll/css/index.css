@@ -3,6 +3,7 @@ html,
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
+  overflow-x: hidden;
 }
 .search {
   font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1920 - 320));
@@ -15,7 +16,7 @@ input {
 .container {
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50vh;
+  height: 120vh;
 }
 .suggested {
   display: flex;
@@ -24,17 +25,26 @@ input {
 .suggested > a :hover {
   color: black;
 }
-h2 {
-  font-weight: 700;
+.motive-sec {
+  background:no-repeat center/ 100% url("https://live.staticflickr.com/3122/2297656899_ce47bb929c_b.jpg");
+  position: relative;
 }
-.about {
-  background: no-repeat center url('https://createmotive.com/motive/wp-content/uploads/2016/01/motive-12.png');
-  display: grid;
+.motive-sec1 {
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.motive {
+  color: #fff;
   column-gap: 20px;
+  display: grid;
   grid-template-rows: 1 fr;
+  position: relative;
   place-items: center;
+  width: 60%;
 }
-.about-png {
+.motive-png {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
@@ -42,27 +52,29 @@ h2 {
   max-width: 100%;
   margin-top: 20px;
 }
-.about-head {
+.motive-head {
   font-size: 35px;
+  font-weight: 800;
   margin-bottom: 0;
   text-align: center;
   width: 100%;
 }
-.about-text {
+.motive-text {
   padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
   text-align: justify;
 }
-hr {
+#hr1 {
   border: none;
 }
 .team {
   display: grid;
-  grid-template-rows: 100px repeat(4, 300px);
+  grid-template-rows: 100px repeat(4, 1fr);
   grid-template-columns: 1fr 1fr;
   margin-top: 50px;
 }
 .mem {
-  border-radius: 10px;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 0.5fr 1fr;
@@ -103,8 +115,14 @@ hr {
   left: 3.5%;
   width: 200px;
 }
+.name {
+  margin: 80px 0 40px 0;
+  font-size: x-large;
+  font-weight: 600;
+}
 .team-head {
   color: #000;
+  font-weight: 800;
   grid-column-start: 1;
   grid-column-end: 3;
   font-size: 35px;
@@ -114,12 +132,75 @@ hr {
   font-size: 20px;
   text-align: justify;
 }
+.feedbackCont {
+  display: flex;
+  height: 70vh;
+  margin-top: 30vh;
+  place-content: center;
+}
+.feedback {
+  border: solid #000 1px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  height: 500px;
+  width: 510px;
+}
+.feedbackText {
+  background-color: #2FA4FF;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+}
+.feedbackFormCont {
+  display: grid;
+  flex-direction: column;
+  place-items: center;
+}
+.goalBtn {
+  background-color: #fff;
+  border: solid 0.5px;
+  border-radius: 7px;
+  margin: 0 10px;
+  padding: 8px;
+  width: 120px;
+}
+.goalBtn:hover {
+  background-color: #2FA4FF;
+  color: #fff;
+}
+#reason,
+#suggest {
+  border: solid 1px;
+  border-radius: 4px;
+  height: 40px;
+  width: 100%;
+}
+#suggest {
+  padding: 10px;
+  height: 80px;
+}
+footer {
+  background-color: rgba(240, 240, 240, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  place-items: center;
+}
+.page-bg,
+.animation-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 180vh;
+  width: 100%;
+  z-index: -1;
+}
+
 @media screen and (max-width: 1500px) and (max-height: 1000px) {
   .pf-png {
     position: static;
-  }
-  h3 {
-    margin-top: 20px;
   }
   hr {
     border-top: dotted 1rem;
@@ -127,42 +208,31 @@ hr {
     width: 100px;
   }
 }
-@media screen and (max-width: 1100px) {
-  .about {
+@media screen and (max-width: 1150px) {
+  .motive {
     grid-template-columns: none;
+    width: 80%;
   }
-  .about-text {
+  .motive-text {
     font-size: 20px;
     font-weight: 700;
   }
-  .about-png {
+  .motive-png {
     display: none;
   }
 }
-/* @media screen and (max-width: 1000px) {
-  .team {
-    grid-template-rows: 60px 1fr 1fr;
-  }
-  .mem-1 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-  .mem-2 {
-    grid-column-start: 3;
-    grid-column-end: 5;
-  }
-} */
-@media screen and (max-width: 500px) {
-  .team {
-    grid-template-rows: 60px repeat(4, 1fr);
-  }
-  .mem {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    width: 60%;
-  }
+@media screen and (max-width: 1000px) {
 }
 @media only screen and (max-width: 600px) {
+  .motive-sec {
+    top: 30vh;
+  }
+  .motive {
+    width: 100%;
+  }
+  .motive-text {
+    font-size: 15px;
+  }
   .container {
     background-repeat: no-repeat;
     background-size: cover;
@@ -173,18 +243,63 @@ hr {
     text-shadow: 4em;
     font-size: 2em;
   }
+  .mem {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: none;
+  }
+  .name {
+    margin: 40px 0;
+  }
+  .page-bg,
+  .animation-wrapper{
+    height: 140vh;
+  }
+}
+@media screen and (max-width: 500px) {
+}
+
+/* Scroll effect */
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.revealSide {
+  position: relative;
+  transform: translateX(350px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.revealSide.active{
+  transform: translateX(0);
+  opacity: 1;
+}
+.rerevealSide {
+  position: relative;
+  transform: translateX(-350px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.rerevealSide.active{
+  transform: translateX(0);
+  opacity: 1;
+}
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* Particles */
-.page-bg,
+/* .page-bg,
 .animation-wrapper {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 180vh;
   width: 100%;
   z-index: -1;
-}
+} */
 
 .page-bg {
   background-color: #000;

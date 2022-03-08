@@ -5,6 +5,14 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.sylla {
+  font-size: 50px;
+}
 .search {
   font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1920 - 320));
 }
@@ -27,19 +35,17 @@ input {
 }
 .motive-sec {
   background:no-repeat center/ 100% url("https://live.staticflickr.com/3122/2297656899_ce47bb929c_b.jpg");
-  position: relative;
 }
 .motive-sec1 {
   background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
   display: flex;
   justify-content: center;
-  position: relative;
+  /* position: relative; */
 }
 .motive {
   color: #fff;
   column-gap: 20px;
   display: grid;
-  grid-template-rows: 1 fr;
   position: relative;
   place-items: center;
   width: 60%;
@@ -69,10 +75,19 @@ input {
   border: none;
 }
 .team {
+  background-image: linear-gradient(to top, rgba(14, 24, 95, 1), rgba(14, 24, 95, 0.5));
+  color: #fff;
   display: grid;
   grid-template-rows: 100px repeat(4, 1fr);
   grid-template-columns: 1fr 1fr;
-  margin-top: 50px;
+}
+.team-head {
+  color: #fff;
+  font-weight: 800;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 35px;
+  place-self: center;
 }
 .mem {
   display: grid;
@@ -81,8 +96,8 @@ input {
   grid-column-start: 1;
   grid-column-end: 3;
   height: 100%;
-  position: relative;
   padding: 20px;
+  position: relative;
   width: 50%;
 }
 .mem-1 {
@@ -117,16 +132,8 @@ input {
 }
 .name {
   margin: 80px 0 40px 0;
-  font-size: x-large;
+  font-size: 25px;
   font-weight: 600;
-}
-.team-head {
-  color: #000;
-  font-weight: 800;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  font-size: 35px;
-  place-self: center;
 }
 .team-text {
   font-size: 20px;
@@ -143,20 +150,31 @@ input {
   border-radius: 5px;
   display: grid;
   grid-template-rows: 60px 1fr;
-  height: 500px;
-  width: 510px;
+  width: 500px;
 }
-.feedbackText {
+.feedbackText-cont {
   background-color: #2FA4FF;
   display: flex;
-  align-items: center;
   height: 100%;
   padding: 0 20px;
 }
+.feedbackText {
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  place-self: center;
+}
 .feedbackFormCont {
   display: grid;
+  grid-template-rows: repeat(3, 1fr);
   flex-direction: column;
   place-items: center;
+}
+.button-text {
+  margin: 16px;
+}
+center {
+  width: 100%;
 }
 .goalBtn {
   background-color: #fff;
@@ -181,19 +199,12 @@ input {
   padding: 10px;
   height: 80px;
 }
-footer {
-  background-color: rgba(240, 240, 240, 1);
-  display: flex;
-  flex-direction: column;
-  height: 100px;
-  place-items: center;
-}
 .page-bg,
 .animation-wrapper {
   position: absolute;
   top: 0;
   left: 0;
-  height: 180vh;
+  height: 130vh;
   width: 100%;
   z-index: -1;
 }
@@ -202,7 +213,7 @@ footer {
   .pf-png {
     position: static;
   }
-  hr {
+  #hr1 {
     border-top: dotted 1rem;
     margin: 150px auto;
     width: 100px;
@@ -221,9 +232,10 @@ footer {
     display: none;
   }
 }
-@media screen and (max-width: 1000px) {
-}
 @media only screen and (max-width: 600px) {
+  .sylla {
+    font-size: 30px;
+  }
   .motive-sec {
     top: 30vh;
   }
@@ -238,7 +250,6 @@ footer {
     background-size: cover;
     height: 80vh;
   }
-
   .suggested :hover {
     text-shadow: 4em;
     font-size: 2em;
@@ -246,16 +257,76 @@ footer {
   .mem {
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: none;
+    padding: 0;
   }
   .name {
     margin: 40px 0;
   }
+  #hr1 {
+    display: none;
+    margin: 40px auto;
+  }
+  .feedbackCont {
+    margin-top: 2px;
+  }
+  .feedback {
+    border: none;
+  }
+  .button-text {
+    margin: 20px 0 0 13px;
+  }
   .page-bg,
   .animation-wrapper{
-    height: 140vh;
+    height: 120vh;
   }
 }
 @media screen and (max-width: 500px) {
+  .sylla {
+    font-size: 25px;
+  }
+  .tram {
+    grid-template-columns: none;
+  }
+  .mem {
+    grid-column-start: none;
+    grid-column-end: none;
+  }
+  .team-head {
+    grid-column-start: none;
+    grid-column-end: none;
+  }
+  .mem-1,.mem-2,.mem-3,.mem-4 {
+    place-self: center;
+  }
+  .feedbackCont {
+    height: 100%;
+  }
+  .feedback {
+    width: 100%;
+  }
+  .feedbackFormCont {
+    grid-template-rows: repeat(3, 120px);
+  }
+  .feedbackText {
+    font-size: 100%;
+  }
+  .button-cont {
+    width: 85%;
+  }
+  .goalBtn {
+    width: 27%;
+  }
+}
+@media screen and (max-width: 430px) {
+  .feedback,
+  label {
+    font-size: 15px;
+  }
+  .goalBtn {
+    font-size: 12px;
+    padding: 5px;
+    margin: 2%;
+  }
 }
 
 /* Scroll effect */

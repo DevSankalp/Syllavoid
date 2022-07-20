@@ -1,2 +1,2 @@
-# Syllavoid
-![mainlogo](https://user-images.githubusercontent.com/90516956/157272594-308e4005-7da3-4761-ba49-8a4526d4d0eb.png)
+# Team HackerJacks
+![Screenshot (160)](https://user-images.githubusercontent.com/94849180/157838190-a5380a79-7a16-4916-9ba1-45d0a4126f9f.png)

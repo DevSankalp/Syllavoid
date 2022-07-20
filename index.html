@@ -12,15 +12,20 @@
     <link rel="stylesheet" href="css/style2.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/particle.css" />
+    <link rel="stylesheet" href="css/flipcard.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Document</title>
   </head>
-  <body>
+  <body class="scroll-smooth">
     <div id="preloader"></div>
     <div class="page-bg"></div>
     <div class="animation-wrapper">
@@ -29,22 +34,31 @@
       <div class="particle particle-3"></div>
       <div class="particle particle-4"></div>
     </div>
-    <nav
-      class="flex justify-between px-10 m-12 text-xl text-white font-bold mouse-pointer"
-    >
-      <ul class="nav-content">
-        <li>
-          <h1 class="sylla">
-            Sylla<span class="text-red-600 void">Void</span>
-          </h1>
-        </li>
-        <li><button id="open">SIGN IN</button></li>
-      </ul>
+    <nav>
+      <h1 class="sylla">Sylla<span class="text-red-600 void">Void</span></h1>
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/menu--v4.png" id="burger" />
+      <div class="main-nav">
+        <ul class="hidden span-1 flex md:grid nav-content" id="menu">
+          <li>
+            <a class="navbar" href="#motive">Motive</a>
+          </li>
+          <li>
+            <a class="navbar" href="#teams">Team</a>
+          </li>
+          <li>
+            <a class="navbar" href="#tools">Tools</a>
+          </li>
+          <li>
+            <button class="signin_btn" id="open">SignIn</button>
+          </li>
+        </ul>
+      </div>
     </nav>
     <section class="search h-[80vh]">
-      <div class="mt-[200px]">
+      <img src="https://www.pngall.com/wp-content/uploads/5/Astronaut-Vector-Transparent.png" alt="" class="vector-img">
+      <div class="mt-[200px] md:m-0">
         <h1
-          class="text-center mt-16 text-white text-2xl md:text-5xl text-shadow-l font-bold"
+          class="text-center mt-16 text-white text-xl md:text-5xl text-shadow-l font-bold"
         >
           <a
             href=""
@@ -57,39 +71,38 @@
         </h1>
         <label
           for="countries"
-          class="block text-center text-l mt-16 font-medium text-white dark:white"
+          class="hidden md:block text-center text-l mt-16 font-medium text-white dark:white"
           >Select your <u class="text-red-500">College</u> 🏫</label
         >
-        <div class="mt-2 flex flex-col justify-center align-center relative">
-          <div class="flex justify-center">
-            <input
-              type="text"
-              placeholder="Search..."
-              class="search-input px-5 py-2 rounded-[4px] shadow-white text-red-500 focus:bg-blue-200 w-[40%]"
-            />
+        <div class="mt-2 search-cont">
+          <div class="containerS">
+            <input type="text" placeholder="Search..." class="search-input" />
+            <div class="searchS"></div>
           </div>
           <div
-            class="suggestions font-3xl font-bold md:text-xl mt-8 text-center text-red-600 animate-bounce hover:animate-none active:text-white active:text-3xl"
+            class="suggestions flex-col items-center space-y-2 font-3xl font-bold md:text-xl mt-8 text-center text-red-600 active:text-white active:text-3xl"
           ></div>
         </div>
       </div>
     </section>
-    <section class="motive-sec">
+    <section class="motive-sec" id="motive">
       <div class="motive-sec1">
         <div class="motive">
           <h2 class="motive-head">Motive</h2>
-          <p class="motive-text text-center mt-16">
+          <p class="motive-text text-center mt-8 md:mt-16">
             Having complications in finding syllabus of colleges?<br /><br />
             <span class=""
-              >Here's the solution...Get the syllabus of any college you
-              want...we are hereby providing you the syllabus of the different
-              colleges you might be searching for,</span
+              >Here's the solution...Get the syllabus of any college you want,we
+              are hereby providing you the syllabus of the different colleges
+              you might be searching for,just enter your college name and get
+              the detailed syllabus alongwith study material of your desired
+              college.</span
             >
           </p>
         </div>
       </div>
     </section>
-    <section class="team-cont">
+    <section class="team-cont" id="teams">
       <div class="team">
         <h2 class="team-head">Our Team</h2>
         <div class="mem mem-1 rerevealSide">
@@ -100,10 +113,10 @@
               class="pf-png pf-png1"
             />
           </div>
-          <h3 class="name">---Name---</h3>
+          <h3 class="name">Shekhar Patel</h3>
           <p class="team-text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet,
-            culpa!
+            B.Tech (CSE) <br>
+            Web Programming
           </p>
         </div>
         <div class="mem mem-2 revealSide">
@@ -114,10 +127,10 @@
               class="pf-png pf-png2"
             />
           </div>
-          <h3 class="name">---Name---</h3>
-          <p class="team-text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet,
-            culpa!
+          <h3 class="name">Sankalp Srivastava</h3>
+            <p class="team-text">
+              B.Tech (CSE) <br>
+              Web Designing
           </p>
         </div>
         <div class="mem mem-1 mem-3 rerevealSide">
@@ -128,10 +141,10 @@
               class="pf-png pf-png1"
             />
           </div>
-          <h3 class="name">---Name---</h3>
+          <h3 class="name">Mihir Aman Raj</h3>
           <p class="team-text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet,
-            culpa!
+            B.Tech (CSE AI) <br>
+            Web Designing
           </p>
         </div>
         <div class="mem mem-2 mem-4 revealSide">
@@ -142,14 +155,96 @@
               class="pf-png pf-png2"
             />
           </div>
-          <h3 class="name">---Name---</h3>
+          <h3 class="name">Vivek Singh</h3>
           <p class="team-text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet,
-            culpa!
+            B.Tech (CSE) <br>
+            Content Editor
           </p>
         </div>
       </div>
     </section>
+    <div id="tools" class="tools">
+      <h2 id="tools-title">Tools Used</h2>
+      <section id="themes-section" class="section themes-section">
+        <label class="jadu slideanim">
+          <input type="checkbox" />
+          <div class="flip-card">
+            <div class="front">
+              <img
+                src="https://img.icons8.com/color/120/000000/html-5--v1.png"
+              />
+              <h1>HTML:5</h1>
+              <h2>For Structure</h2>
+              <p>Click for more info</p>
+            </div>
+            <div class="back">
+              <h1>More Info</h1>
+              <hr />
+              <p class="">HTML stands for Hyper Text Markup Language. HTML is the standard markup language for creating Web pages.
+              </p>
+              <hr />
+            </div>
+          </div>
+        </label>
+        <label class="jadu slideanim">
+          <input type="checkbox" />
+          <div class="flip-card">
+            <div class="front">
+              <img src="https://img.icons8.com/color/120/000000/css3.png" />
+              <!-- Write one liner about each tool in h2 section and their desciption in li section  -->
+              <h1>CSS:3</h1>
+              <h2>For Styling</h2>
+              <p>Click for more info</p>
+            </div>
+            <div class="back">
+              <h1>More Info</h1>
+              <hr />
+              <p>CSS is the language we use to style an HTML document. CSS describes how HTML elements should be displayed.</p>
+              <hr />
+            </div>
+          </div>
+        </label>
+        <label class="jadu slideanim">
+          <input type="checkbox" />
+          <div class="flip-card">
+            <div class="front">
+              <img
+                src="https://img.icons8.com/color/120/000000/javascript--v1.png"
+              />
+              <h1>JAVASCRIPT</h1>
+              <h2>For Functionality</h2>
+              <p>Click for more info</p>
+            </div>
+            <div class="back">
+              <h1>More Info</h1>
+              <hr />
+              <p>JavaScript is the world's most popular programming language. JavaScript is the programming language of the Web. </p>
+              <hr />
+            </div>
+          </div>
+        </label>
+        <label class="jadu slideanim">
+          <input type="checkbox"/>
+          <div class="flip-card">
+            <div class="front">
+              <img
+                src="https://hight.io/_nuxt/img/tailwind.3558838.png"
+                alt=""
+              />
+              <h1>TAILWIND CSS</h1>
+              <h2>For CSS Framework</h2>
+              <p>Click for more info</p>
+            </div>
+            <div class="back">
+              <h1>More Info</h1>
+              <hr />
+              <p>Tailwind CSS is basically a utility-first CSS framework for rapidly building custom user interfaces.</p>
+              <hr />
+            </div>
+          </div>
+        </label>
+      </section>
+    </div>
     <footer>
       <div class="row">
         <div class="col">
@@ -157,13 +252,13 @@
             Sylla<span class="text-red-600 void">Void</span>
           </h1>
           <p class="detail">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
-            reprehenderit perferendis ea consectetur eum, suscipit odio. Modi
-            nisi quis quos, neque beatae libero amet! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Perspiciatis laborum obcaecati ipsam
-            consectetur, similique vero harum deserunt vitae voluptatibus
-            tempore id omnis iusto, laboriosam eos ut! Quasi ea quae
-            perferendis!
+            This Website is created and designed by team
+            <b>"Hackerjacks"</b>. The main purpose of this website is to make it
+            easy for the students to find the syllabus of different courses of
+            known colleges of India, which helps them to know about whether what
+            is being taught in the college and course they want to take
+            admission in. It will help them to choose the best college and
+            course according to their interest.
           </p>
         </div>
         <div class="col">
@@ -184,7 +279,7 @@
           </h3>
           <form action="">
             <i class="fa-solid fa-envelope"></i>
-            <input type="email" placeholder="Enter Your Email-id" />
+            <input type="email" placeholder="Enter Your Email-id"/>
             <button><i class="fa-solid fa-arrow-right"></i></button>
           </form>
           <div class="social">
@@ -193,6 +288,7 @@
             <i class="fa-brands fa-linkedin"></i>
             <i class="fa-brands fa-instagram"></i>
           </div>
+          <a href="feedback.html"><button class="feedback-btn">Feedback</button></a>
         </div>
       </div>
       <hr />
@@ -220,9 +316,20 @@
       <p class="forgot">Forgot Password?</p>
       <hr />
       <p class="or">OR</p>
-      <p>Need an account ? <a href="sign.html">SIGN UP</a></p>
+      <p>Need an account ? <a href="signup.html">SIGN UP</a></p>
     </div>
     <div id="overlay"></div>
+    <script>
+      const burger = document.querySelector('#burger');
+      const menu = document.querySelector('#menu');
+      burger.addEventListener("click", () => {
+        if (menu.classList.contains("hidden")) {
+          menu.classList.remove("hidden");
+        } else {
+          menu.classList.add("hidden");
+        }
+      });
+    </script>
     <script>
       const open = document.getElementById("open");
       const container = document.getElementById("modal");

@@ -1,7 +1,3 @@
-const username = "SANKALP";
-Cookies.set('Name', username, {expires: 1});
-var name = Cookies.get('Name');
-console.log(name);
 function storeName() {
   var content = document.getElementById("suggestedSearch").textContent;
   Cookies.set('pdfName', content, {expires: 20});

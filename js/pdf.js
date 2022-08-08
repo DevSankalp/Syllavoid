@@ -1,9 +1,8 @@
 function storeName() {
   var content = document.getElementById("suggestedSearch").textContent;
   Cookies.set('pdfName', content, {expires: 20});
-  var content1 = Cookies.get('pdfName');
-  console.log(content1);
 };
+
 function createPdf() {
   var content = Cookies.get('pdfName');
   document.getElementById("heading").innerHTML = content+" PDF";

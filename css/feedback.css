@@ -126,13 +126,16 @@ button{
   background: rgb(234, 241, 234);
   font-size:0.9rem;
   transition: all 0.4s linear;
-  
 }
-/* button:hover{
+.form-group button {
+  width: 25%;
+}
+button:hover{
   font-weight: bolder;
-  font-size:1.1rem;
- background:rgb(2, 168, 2);
-} */
+  color: #fff;
+  background-color: black;
+  box-shadow: #fff 0 0 1px 2px;
+}
 .home_{
   position: fixed;
   right: 10px;
